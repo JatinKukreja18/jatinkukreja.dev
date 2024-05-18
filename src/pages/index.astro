@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../layouts/Card.astro";
+import SideBio from "../components/SideBio/SideBio.tsx";
+import { getCollection } from "astro:content";
+
+const experiences = await getCollection("experiences");
+console.log(experiences);
+---
+
+<script>
+  console.log(window.location.search);
+</script>
+
+<Layout title="Welcome to Astro.">
+  <div class="flex flex-wrap w-full py-10">
+    <aside class="relative sticky top-5 w-1/3">
+      <Card>
+        <SideBio />
+      </Card>
+    </aside>
+    <main class="w-2/3">
+      <ul role="list" class="link-card-grid">
+        {
+          experiences.map((exp) => (
+            <a href="https://docs.astro.build/" title={exp.data.company}>
+              {exp.data.company}
+            </a>
+          ))
+        }
+      </ul>
+    </main>
+  </div>
+</Layout>

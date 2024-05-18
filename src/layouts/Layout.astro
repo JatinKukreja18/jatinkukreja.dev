@@ -1,0 +1,72 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description = "Jatin Kukreja Portfolio" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style>
+      .small-move {
+        animation: small-move 30s linear infinite;
+      }
+      @keyframes small-move {
+        0% {
+          transform: translate(15vw, -30%);
+        }
+        25% {
+          transform: translate(-30%, 7vh);
+        }
+        50% {
+          transform: translate(15vw, 20vh);
+        }
+        75% {
+          transform: translate(-20%, -30%);
+        }
+        100% {
+          transform: translate(15vw, -30%);
+        }
+      }
+      .large-move {
+        animation: large-move 30s linear infinite;
+      }
+      @keyframes large-move {
+        0% {
+          transform: translate(65vw, 20vh);
+        }
+        33% {
+          transform: translate(35vw, -5vh);
+        }
+        67% {
+          transform: translate(40vw, 60vh);
+        }
+        100% {
+          transform: translate(65vw, 20vh);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-wrap px-5">
+    <div
+      style="background-image:radial-gradient(53.04% 53.04% at 50% 50%, #12CAD6 0%, rgba(255, 255, 255, 0) 83%); width:24vw; height: 24vw"
+      class="fixed small-move"
+    >
+    </div>
+    <div
+      style="background-image:radial-gradient(53.04% 53.04% at 50% 50%, #FF7F50 0%,  rgba(255, 255, 255, 0) 87%); width:65vw; height: 65vw"
+      class="fixed large-move"
+    >
+    </div>
+    <slot />
+  </body>
+</html>
