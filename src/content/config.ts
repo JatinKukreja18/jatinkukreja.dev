@@ -2,10 +2,11 @@ import { defineCollection, z } from "astro:content";
 
 const experienceCollection = defineCollection({
   schema: z.object({
-    author: z.string(),
+    link: z.string(),
     company: z.string(),
     jobTitle: z.string(),
-    years: z.number(),
+    location: z.string(),
+    years: z.string(),
   }),
 });
 

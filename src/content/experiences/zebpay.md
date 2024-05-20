@@ -1,6 +1,7 @@
 ---
-author: "jk"
+location: "India(Remote)"
 jobTitle: "Software Developer"
 company: "Zebpay"
-years: 2
+years: "Dec 2020 - Dec 2021"
+link: ""
 ---

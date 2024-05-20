@@ -1,0 +1,25 @@
+---
+import Card from "../../layouts/Card.astro";
+import { getCollection } from "astro:content";
+
+const { class: className, ...rest } = Astro.props;
+const experiences = await getCollection("experiences");
+
+console.log(experiences);
+---
+
+<div class=`${className} shadow-card`>
+  <Card title="Experience">
+    <ul role="list" class="gap-2 flex flex-col">
+      {
+        experiences.map((exp) => (
+          <li class="mb-4 leading-none">
+            <h4 class="text-md font-sans  m-0 mb-1 text-brand-blue">{exp.data.jobTitle}</h4>
+            <p class="text-xs font-sans m-0 text-brand-accent">{exp.data.company}</p>
+            <span class="text-xs font-sans text-gray-400">{exp.data.years}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </Card>
+</div>

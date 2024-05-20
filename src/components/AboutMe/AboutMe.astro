@@ -1,0 +1,17 @@
+---
+import Card from "../../layouts/Card.astro";
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<div class=`${className} shadow-card`>
+  <Card title="About Me">
+    <p class="text-lg font-sans text-brand-blue">
+      I’ve spent the last 9+ years working in MNCs, startups, a design studio and even as a full-time freelancer.
+      <br />
+      <br />
+      Fuelled by a passion for developing compelling products, I strive to develop a keen eye for design while working on my technical skills
+      through active learning.
+    </p>
+  </Card>
+</div>

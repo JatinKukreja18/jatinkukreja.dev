@@ -1,0 +1,13 @@
+---
+import Card from "../../layouts/Card.astro";
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<div class=`${className} shadow-card`>
+  <Card title="Education">
+    <h4 class="text-md font-sans text-brand-blue">B.tech in Computer Science</h4>
+    <p class="text-sm font-sans text-brand-accent">SRM University</p>
+    <span class="text-sm font-sans text-brand-blue">2010 - 2014</span>
+  </Card>
+</div>

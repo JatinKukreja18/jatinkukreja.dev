@@ -1,0 +1,21 @@
+{
+  "data": {
+    "core": {
+      "title": "Core",
+      "skills": ["HTML", "CSS", "Javascript"]
+    },
+    "libraries": {
+      "title": "Libraries/Frameworks",
+      "skills": ["jQuery", "Astro", "Next.js", "React", "Angular"]
+    },
+
+    "styling": {
+      "title": "Styling",
+      "skills": ["Tailwind CSS", "AntDesign", "Material UI", "Sass"]
+    },
+    "tools": {
+      "title": "Tools/Platform",
+      "skills": ["Webflow", "Wordpress", "Shopify"]
+    }
+  }
+}

@@ -14,6 +14,10 @@ const { title, description = "Jatin Kukreja Portfolio" } = Astro.props;
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <style>
@@ -56,14 +60,14 @@ const { title, description = "Jatin Kukreja Portfolio" } = Astro.props;
       }
     </style>
   </head>
-  <body class="min-h-screen flex flex-wrap px-5">
+  <body class="min-h-screen flex flex-wrap px-5" style="background-color: #fffff7;">
     <div
-      style="background-image:radial-gradient(53.04% 53.04% at 50% 50%, #12CAD6 0%, rgba(255, 255, 255, 0) 83%); width:24vw; height: 24vw"
+      style="background-image:radial-gradient(53.04% 53.04% at 50% 50%, #12CAD6 0%, rgba(255, 255, 255, 0) 83%); width:35vw; height: 35vw"
       class="fixed small-move"
     >
     </div>
     <div
-      style="background-image:radial-gradient(53.04% 53.04% at 50% 50%, #FF7F50 0%,  rgba(255, 255, 255, 0) 87%); width:65vw; height: 65vw"
+      style="background-image:radial-gradient(53.04% 53.04% at 50% 50%, var(--brand-accent) 0%,  rgba(255, 255, 255, 0) 87%); width:65vw; height: 65vw"
       class="fixed large-move"
     >
     </div>
