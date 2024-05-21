@@ -4,6 +4,7 @@ import Card from "../layouts/Card.astro";
 import SideBio from "../components/SideBio/SideBio.astro";
 import AboutMe from "../components/AboutMe/AboutMe.astro";
 import Experience from "../components/Experience/Experience.astro";
+import Projects from "../components/Projects/Projects.astro";
 import Skills from "../components/Skills/Skills.astro";
 import Education from "../components/Education/Education.astro";
 
@@ -24,9 +25,8 @@ import TimeZone from "../components/TimeZone/TimeZone.astro";
     <Education class="col-span-1" />
     <Experience class="col-span-1 md:row-span-2" />
     <TimeZone class="col-span-1 md:row-span-1" />
-    <div style="box-shadow:1px 1px 14px -1px #f2f2f2" class="md:col-start-2 col-span-1 md:row-span-1">
-      <Card title="Projects" />
-    </div>
+
+    <Projects class="md:col-start-2 col-span-1 md:row-span-1" />
 
     <div class="col-span-1 md:col-start-2 lg:col-start-4 md:row-span-1">
       <Card title="CV">
