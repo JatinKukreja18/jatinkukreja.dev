@@ -2,7 +2,7 @@
 import Card from "../../layouts/Card.astro";
 import data from "../../skills.json";
 import { PillButton } from "../../components/ui/PillButton";
-const { class: className, ...rest } = Astro.props;
+const { class: className } = Astro.props;
 const { core, styling, libraries, tools } = data.data;
 ---
 
@@ -10,19 +10,19 @@ const { core, styling, libraries, tools } = data.data;
   <Card title="Skills">
     <h4 class="font-sans font-bold my-2">{core.title}</h4>
     <div class="flex flex-wrap mb-8 gap-2">
-      {core.skills.map((v) => <PillButton text={v} />)}
+      {core.skills.map((v) => <PillButton text={v} type="text" />)}
     </div>
     <h4 class="font-sans font-bold my-2">{libraries.title}</h4>
     <div class="flex flex-wrap mb-8 gap-2">
-      {libraries.skills.map((v) => <PillButton text={v} />)}
+      {libraries.skills.map((v) => <PillButton type="text" text={v} />)}
     </div>
     <h4 class="font-sans font-bold my-2">{styling.title}</h4>
     <div class="flex flex-wrap mb-8 gap-2">
-      {styling.skills.map((v) => <PillButton text={v} />)}
+      {styling.skills.map((v) => <PillButton type="text" text={v} />)}
     </div>
     <h4 class="font-sans font-bold my-2">{tools.title}</h4>
     <div class="flex flex-wrap gap-2">
-      {tools.skills.map((v) => <PillButton text={v} />)}
+      {tools.skills.map((v) => <PillButton type="text" text={v} />)}
     </div>
   </Card>
 </div>

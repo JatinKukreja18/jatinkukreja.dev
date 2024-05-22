@@ -13,10 +13,7 @@ const experienceCollection = defineCollection({
 const projectsCollection = defineCollection({
   schema: z.object({
     link: z.string(),
-    company: z.string(),
-    jobTitle: z.string(),
-    location: z.string(),
-    years: z.string(),
+    name: z.string(),
   }),
 });
 

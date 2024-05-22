@@ -1,25 +1,16 @@
 ---
 import Card from "../../layouts/Card.astro";
 import { getCollection } from "astro:content";
+import { PillButton } from "../ui/PillButton";
 
 const { class: className, ...rest } = Astro.props;
 const projects = await getCollection("projects");
-
-console.log(projects);
 ---
 
 <div class=`${className} shadow-card`>
-  <Card title="Projects" clickable={true}>
-    <ul role="list" class="gap-4 flex flex-col">
-      {
-        projects.map((project) => (
-          <li class="leading-none">
-            <h4 class="text-md font-sans  m-0 mb-1 text-brand-blue">{project.data.jobTitle}</h4>
-            <p class="text-xs font-sans m-0 text-brand-accent">{project.data.company}</p>
-            <span class="text-xs font-sans text-gray-400">{project.data.years}</span>
-          </li>
-        ))
-      }
+  <Card title="Selected Projects">
+    <ul role="list" class="gap-2 flex flex-wrap">
+      {projects.map((project) => <PillButton type="link" href={project.data.link} text={project.data.name} />)}
     </ul>
   </Card>
 </div>
